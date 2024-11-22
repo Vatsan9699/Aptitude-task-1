@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Interpretation-Quiz </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .question {
+            background: #FF0000;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            font-size: 20px;
+            
+        }
+
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+
+        .option:hover {
+            background-color: #00FFFF;
+        }
+
+        .correct {
+            background-color: #FFFF00;
+            border-color: #c3e6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .wrong {
+            background-color: #0fc0fc;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+            background-color: #ffff66;
+        }
+
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #966fd6;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 80%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. The total amount of bonus paid by the company during the given period is approximately what percent of the total amount of salary paid during this period?</p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  0.1% </div>
+            <div class="option" data-answer="wrong"> B.  0.5% </div>
+            <div class="option" data-answer="wrong"> C.  1.25% </div>
+            <div class="option" data-answer="correct">D.  1% </div>
+        </div>
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Answer: Option D
+
+            Required percentage	
+            =	[	(3.00 + 2.52 + 3.84 + 3.68 + 3.96)	x 100	]	%
+            (288 + 342 + 324 + 336 + 420)
+            =	[	17	x 100	]	%
+            1710
+            ~= 1%.
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Steve
+            said:
+             
+             Easy
+            17/1710*100,
+            = 17/171 *10,
+            = 17 * 10/171.
+            = 170/171.
+            = 1.</div>
+
+        <div class="comment" data-date="2023-04-18" data-detail="3">Katherin said:  Total bonus is 17.02.</div>
+
+        <div class="comment" data-date="2023-02-13" data-detail="4">Linden  said: Given; 60 km = 60 * 1000 = 60,000m...</div>
+
+        <div class="comment" data-date="2023-10-16" data-detail="2">Rebecca said:  40*5/18. 48/3...</div>
+
+      </div>
+       <br>
+
+    
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p> <img src="15-3-1-1.png" alt="" width="100" height="100">
+            <br>    
+            
+           2. For which of the following pairs of years the total exports from the three Companies together are equal?     </p>
+        
+        <div class="options">
+
+            <div class="option" data-answer="wrong">  A.  1995 and 1998</div>
+            <div class="option" data-answer="wrong">  B.  1996 and 1998</div>
+            <div class="option" data-answer="wrong">  C.  1997 and 1998</div>
+            <div class="option" data-answer="correct"> D.  1995 and 1996 </div>
+            
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            
+            Answer: Option D
+            Explanation:
+            Total exports of the three Companies X, Y and Z together, during various years are:
+            
+            In 1993 = Rs. (30 + 80 + 60) crores = Rs. 170 crores.  In 1994 = Rs. (60 + 40 + 90) crores = Rs. 190 crores.     In 1995 = Rs. (40 + 60 + 120) crores = Rs. 220 crores.    In 1996 = Rs. (70 + 60 + 90) crores = Rs. 220 crores.  In 1997 = Rs. (100 + 80 + 60) crores = Rs. 240 crores.  In 1998 = Rs. (50 + 100 + 80) crores = Rs. 230 crores. In 1999 = Rs. (120 + 140 + 100) crores = Rs. 360 crores.  Clearly, the total exports of the three Companies X, Y and Z together are same during the years 1995 and 1996.          
+        
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-02-01" data-detail="5">Itaf Hussain
+            said:  Here is the way for solving this problem in less time. Just look at the four options available you will notice there are  only four years i.e. 1995, 1996, 1997, 1998. So Just calculate the total exports for the following four years 1995, 1996, 1997, 1998.      </div>        
+       
+
+        <div class="comment" data-date="2023-05-15" data-detail="3">Rajashree
+            said: 3600sec then, 1sec = 1/3600hr. 1km =1000m then, 1m = 1/1000km. So, km/hr to m/s is : 1/1000km bigger divided by 1/3600hr.
+            So, they put 18/5.</div>            
+
+        <div class="comment" data-date="2023-09-10" data-detail="4"> Hannah
+            said:  Can't it able to calculate by an easy method to manage our time.     </div>
+
+        <div class="comment" data-date="2023-08-20" data-detail="2"> Will smith said : Is there any easy way to calculate with in a few seconds?  </div>
+
+       </div>
+       <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3. What was the difference between the average exports of the three Companies in 1993 and the average exports in 1998? </p>
+        
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A. 1994 </div>
+            <div class="option" data-answer="wrong"> B. 1995 </div>
+            <div class="option" data-answer="correct"> C. 1996 </div>
+            <div class="option" data-answer="wrong"> D. 1997 </div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            The difference between the exports from the Companies X and Y during the various years are: In 1993 = Rs. (80 - 30) crores = Rs. 50 crores.  In 1994 = Rs. (60 - 40) crores = Rs. 20 crores. In 1995 = Rs. (60 - 40) crores = Rs. 20 crores.  In 1996 = Rs. (70 - 60) crores = Rs. 10 crores.  In 1997 = Rs. (100 - 80) crores = Rs. 20 crores.   In 1998 = Rs. (100 - 50) crores = Rs. 50 crores.          In 1999 = Rs. (140 - 120) crores = Rs. 20 crores.             Clearly, the difference is minimum in the year 1996.
+
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank" rel="noopener">Watch Video Explanation</a> -->
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank">Watch Video Explanation</a> -->
+
+        </div>
+
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5">Shajana said: We take 5/18 to convert from km/h into m/s.     </div>
+
+        <div class="comment" data-date="2023-04-15" data-detail="3">Bhavana B   Nayak said: Length of bridge = (speed of the train * time taken to cross the bridge) - length of the train.
+            = ((45*5/18)*30) - 130,
+            =((25/2) * 30) -130,
+            =(750/2) - 130,
+            = 375m/s - 130s,
+            = 245m.   </div>
+        
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Kiranmaye
+            said:
+       
+           we take 5/18 to convert from km/h into m/s. </div>
+
+          <div class="comment" data-date="2023-01-20" data-detail="2">Ankit kumar said: 60*9/18. 50/3...</div>
+
+        </div>
+        <br>
+    
+
+       <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. In how many of the given years, were the exports from Company Z more than the average annual exports over the given years?  </p>
+       
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  2 </div>
+            <div class="option" data-answer="wrong"> B.  3 </div>
+            <div class="option" data-answer="correct">C. 4  </div>
+            <div class="option" data-answer="wrong"> D.  5 </div>
+
+         </div>
+
+         <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Average annual exports of Company Z during the given period. =	1	x (60 + 90 + 120 + 90 + 60 + 80 + 100). 7
+            = Rs.	(	600/7)	crores
+            = Rs. 85.71 crores. From the analysis of graph the exports of Company Z are more than the average annual exports of Company Z (i.e., Rs. 85.71 crores) during the years 1994, 1995, 1996 and 1999, i.e., during 4 of the given years.
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select> </div>
+        
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Amrita
+            said: It will be 5 so the answer will be D. Here, the average you have taken is wrong. For this question average of z is not required but an average of the three companies is required so the answer would be option D 5. </div>
+   
+        <div class="comment" data-date="2023-05-10" data-detail="4">Quwi
+            said: What about 1993?</div>
+
+         <div class="comment" data-date="2023-08-20" data-detail="2">Pradeep:  Hi @Amrita, agree with you, answer should be 5</div>
+
+         </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>

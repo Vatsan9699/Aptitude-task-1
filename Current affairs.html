@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Current Affairs- Quiz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #91a3b0;
+        }
+        .question {
+            background: #8a2be2;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .option:hover {
+            background-color: #21abcd;
+        }
+
+        .correct {
+            background-color: #00ff00;
+            border-color: #eee;
+            width: 40%;
+            font-size: 20px;
+        }
+        .wrong {
+            background-color: #6f4e37;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+        }
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #996515;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. Who has transitioned to the CEO role at Zee Entertainment?  </p>   
+      
+
+        <div class="options">
+
+        <div class="option" data-answer="correct"> A. Punit Goenka </div>
+         <div class="option" data-answer="wrong"> B. Rajesh Kamat </div>        
+         <div class="option" data-answer="wrong"> C.   Puneet Kinra</div>      
+         <div class="option" data-answer="wrong">D. Subhash Chandra</div>
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation: Option A</strong><br>
+
+            Punit Goenka has taken on the CEO role at Zee Entertainment, shifting from his previous position as Managing Director. This move aims to concentrate on operational objectives, strengthening the company's strategic direction. Concurrently, Mukund Galgali has been appointed as Deputy CEO, supporting Goenka in driving business growth. Goenka's reappointment as CEO for a five-year term, commencing January 1, 2025, is subject to shareholder approval at the upcoming Annual General Meeting on November 28. This leadership transition underscores Zee Entertainment's efforts to enhance its market presence and competitiveness.
+        </div>
+       </div>
+   
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-03-01" data-detail="5">Wilson  said: Is that a correct one?</div>
+            
+        <div class="comment" data-date="2023-09-15" data-detail="3">Tommy 
+            said: Great Explanation!</div>
+            
+        <div class="comment" data-date="2023-04-12" data-detail="4">Watson
+            said: I don`t think that is correct.</div>
+
+        <div class="comment" data-date="2023-07-16" data-detail="2">
+       Smith said:  Total income declined 18.93% to ₹2,034.4 crore during the quarter under review. </div>
+      
+        </div>
+       <br>
+
+    
+     <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>2.  Which Indian company has collaborated with Druk Green Power Corporation Ltd to develop a 5,000 MW green energy project in Bhutan?   </p>    
+
+        <div class="options">
+            <div class="option" data-answer="wrong"> Adani Green Energy </div>
+             <div class="option" data-answer="wrong"> B.  Reliance Power </div>
+            <div class="option" data-answer="correct"> C. Tata Power </div>
+            <div class="option" data-answer="wrong">  D. JSW Energy</div>
+        </div>
+
+        <div class="explanation" id="explanation">
+            <strong>Explanation:
+                Option C
+            </strong><br>
+            Tata Power has partnered with Druk Green Power Corporation Ltd to develop at least 5,000 MW of clean energy generation capacity in Bhutan, harnessing the country's vast hydropower potential. This strategic collaboration contributes to regional energy security and sustainability, aligning with Bhutan's vision to diversify its energy portfolio. The project includes 4,500 MW of hydropower and 500 MW of solar power capacity, demonstrating Tata Power's commitment to renewable energy and sustainable development in the region. This partnership strengthens India-Bhutan energy cooperation and promotes eco-friendly growth.
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+                
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+           </div>
+
+          <div class="comment" data-date="2022-04-01" data-detail="5">Marcus kaushik: Is that a correct one? </div>
+
+           <div class="comment" data-date="2023-02-15" data-detail="3">Mooney
+            said: strategic collaboration contributes to regional energy security </div>
+
+            <div class="comment" data-date="2023-04-10" data-detail="4">Perry said : Tata Power's commitment to renewable energy and sustainable development in the region</div>
+
+            <div class="comment" data-date="2023-01-20" data-detail="2"> Devine said :  Aligning with Bhutan's vision to diversify its energy portfolio..   </div>
+
+       </div>
+       <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3. In which Indian state did the Indian Army and Indian Air Force conduct a joint exercise titled "Gagan Strike-II"?
+        </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="correct"> A. Punjab</div>
+            <div class="option" data-answer="wrong"> B.  Rajasthan </div>
+            <div class="option" data-answer="wrong"> C.  Haryana </div>
+            <div class="option" data-answer="wrong">D.  Uttarakhand</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option A
+            The joint exercise "Gagan Strike-II" conducted by the Indian Army's Kharga Corps and the Indian Air Force (IAF) took place in Punjab. This exercise aimed to refine processes and validate the use of attack helicopters in mechanized operations, showcasing synergy and jointmanship between the two branches of the Indian armed forces.
+
+        </div>
+
+     </div>
+
+
+     <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5"> Nitin
+            said: Is that a correct one?.</div>
+            
+        <div class="comment" data-date="2023-04-15" data-detail="3">Veeru
+            said: This exercise aimed to refine processes and validate the use of attack helicopters in mechanized operations.  </div>
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Shubham
+            said:  showcasing synergy and jointmanship between the two branches of the Indian armed forces.  </div>
+
+        <div class="comment" data-date="2023-01-20" data-detail="2">Jaya said: Great Explanation! </div>
+
+    </div>
+    <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. In which year was the Wildlife Crime Control Bureau (WCCB) formed?   </p>
+     
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  2006</div>
+            <div class="option" data-answer="correct"> B.  2007</div>
+            <div class="option" data-answer="wrong"> C.  2008</div>
+            <div class="option" data-answer="wrong">D.  2009</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option B
+            The Wildlife Crime Control Bureau (WCCB) was formed on June 6, 2007, under the Ministry of Environment, Forest and Climate Change. The WCCB is headquartered in New Delhi and plays a crucial role in combating organized wildlife crime in India. It became fully operational in 2008 and focuses on various functions such as data collection, advisory roles, and international cooperation to curb wildlife offences and prevent illegal trade.
+
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Harris said: It became fully operational in 2008 and focuses on various functions.   </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3"> Merlin
+            said: I think 2007 is right option. </div>
+ 
+        <div class="comment" data-date="2023-05-10" data-detail="4">Hunter
+            said: Not on 2006?. </div>
+  
+        <div class="comment" data-date="2023-08-20" data-detail="2">Carey said: I`m not sure!  </div>
+
+    </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Verbal Reasoning- Quiz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #91a3b0;
+        }
+        .question {
+            background: #00bfff;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .option:hover {
+            background-color: #a8e4a0;
+        }
+
+        .correct {
+            background-color: #ffa812;
+            border-color: #eee;
+            width: 40%;
+            font-size: 20px;
+        }
+        .wrong {
+            background-color: #9457eb;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+        }
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #f8de7e;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. 120, 99, 80, 63, 48, ?      </p>   
+       
+       
+        <div class="options">
+
+            <div class="option" data-answer="correct"> A. 35 </div>
+            <div class="option" data-answer="wrong"> B. 38</div>        
+            <div class="option" data-answer="wrong"> C.  39</div>
+            <div class="option" data-answer="wrong">D. 40</div>
+        </div>
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation: Option A</strong><br>
+
+            The pattern is - 21, - 19, - 17, - 15,.....
+
+            So, missing term = 48 - 13 = 35.
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5">Prabin sharma said: 12 * 10 = 120
+            11 * 9 = 99
+            10 * 8 = 80
+            9 * 7 = 63
+            8 * 6 = 48
+            7 * 5 = 35.</div>
+            
+        <div class="comment" data-date="2023-02-15" data-detail="3">Raju
+            said: 11*11-1 = 120.
+            10*10-1 = 99.
+            9*9-1 = 80.
+            8*8-1 = 63.
+            7*7-1 = 48.
+            6*6-1 = 35. </div>
+            
+        <div class="comment" data-date="2023-05-10" data-detail="4">Suresh Shahi
+            said: Thanks all for solving this. </div>
+
+        <div class="comment" data-date="2023-08-20" data-detail="2">
+       Saranya  said:
+        -21, -19, -17, -15, -13. So here 48-13=35.   </div>
+        </div>
+       <br>
+
+    
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>2.  Choose the word which is different from the rest.     </p>
+
+
+        <div class="options">
+            <div class="option" data-answer="correct"> A. Chicken </div>
+            <div class="option" data-answer="wrong"> B. Snake </div>
+            <div class="option" data-answer="wrong"> C. Swan </div>
+            <div class="option" data-answer="wrong">D.  Crocodile</div>
+        </div>
+
+        <div class="explanation" id="explanation">
+            <strong>Explanation:</strong><br>
+            All except Chicken can live in water.
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+                
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-02-01" data-detail="5">Devanshu kaushik: Swan is the answer because it is the only one which can fly.   </div>
+
+        <div class="comment" data-date="2023-05-15" data-detail="3">Belete
+            said: From the nature of the given alternative, The snake is the answer since it has no legs. </div>
+
+            <div class="comment" data-date="2023-09-10" data-detail="4">Nancy said : Snake is the right answer because it has no legs. </div>
+
+            <div class="comment" data-date="2023-08-20" data-detail="2"> Arjun Singh said : Snake because snake has no legs.   </div>
+
+       </div>
+       <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3. Which word does NOT belong with the others?  </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A. leopard</div>
+            <div class="option" data-answer="wrong"> B.  cougar </div>
+            <div class="option" data-answer="correct"> C.  elephant </div>
+            <div class="option" data-answer="wrong">D.  lion</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option C
+            A leopard, cougar, and lion all belong to the cat family; an elephant does not.
+
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank" rel="noopener">Watch Video Explanation</a> -->
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank">Watch Video Explanation</a> -->
+
+        </div>
+
+     </div>
+
+
+     <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5"> Nitin
+            said: Leopard, cougar lion are carnivores. Elephant is herbivores.</div>
+            
+        <div class="comment" data-date="2023-04-15" data-detail="3">Veeru
+            said: Cougar means?   </div>
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Shubham
+            said:   Because Elephant can't run fast as compared to others.  </div>
+
+        <div class="comment" data-date="2023-01-20" data-detail="2">Jaya said: Cougar is also known as puma.   </div>
+
+    </div>
+    <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. Which word does NOT belong with the others?  </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="correct"> A.  book</div>
+            <div class="option" data-answer="wrong"> B.  index</div>
+            <div class="option" data-answer="wrong"> C.  glossary</div>
+            <div class="option" data-answer="wrong">D.  chapter</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Option A
+            An index, glossary, and chapter are all parts of a book. Choice a does not belong because the book is the whole, not a part.
+
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> M prakash Kumar said: Glossary is the right, the book has an index page and chapter also.    </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3"> Fenil
+            said: I think Glossary is right option. </div>
+ 
+        <div class="comment" data-date="2023-05-10" data-detail="4">Kuhelika
+            said: Why not index?. </div>
+  
+        <div class="comment" data-date="2023-08-20" data-detail="2">AShanaya said: List of words with their definitions called Glossary?  </div>
+
+    </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>

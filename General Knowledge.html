@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Current Affairs- Quiz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #91a3b0;
+        }
+        .question {
+            background: #138808;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .option:hover {
+            background-color: #fe4eda;
+        }
+
+        .correct {
+            background-color: #1fcecb;
+            border-color: #eee;
+            width: 40%;
+            font-size: 20px;
+        }
+        .wrong {
+            background-color: #ff6700;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+        }
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #996515;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. The Battle of Plassey was fought in    </p>   
+
+        <div class="options">
+
+        <div class="option" data-answer="correct"> A. 1757</div>
+         <div class="option" data-answer="wrong"> B. 1782</div>        
+         <div class="option" data-answer="wrong"> C.  1748</div>      
+         <div class="option" data-answer="wrong">D. 1764</div>
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation: Option A</strong><br>
+
+            The Battle of Plassey, 23 June 1757, was a decisive British East India Company victory over the Nawab of Bengal and his French allies, establishing Company rule in South Asia which expanded over much of the Indies for the next 190 years. The battle took place at Palashi, Bengal, on the river banks of the Bhagirathi River, about 150 km north of Calcutta, near Murshidabad, then capital of undivided Bengal. The belligerents were Siraj-ud-daulah, the last independent Nawab of Bengal, and the British East India Company.
+
+        </div>
+       </div>
+   
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-03-01" data-detail="5">Wilson  said: Well said!</div>
+            
+        <div class="comment" data-date="2023-09-15" data-detail="3">Chris 
+            said: Great Explanation!</div>
+            
+        <div class="comment" data-date="2023-04-12" data-detail="4">Lesson
+            said: I don`t think that is correct.</div>
+
+        <div class="comment" data-date="2023-07-16" data-detail="2">
+       Smith said:  The belligerents were Siraj-ud-daulah, the last independent Nawab of Bengal</div>
+      
+        </div>
+       <br>
+
+    
+     <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>2.  Which Indian company has collaborated with Druk Green Power Corporation Ltd to develop a 5,000 MW green energy project in Bhutan?   </p>    
+
+        <div class="options">
+            <div class="option" data-answer="wrong"> A. Adani Green Energy </div>
+             <div class="option" data-answer="wrong"> B.  Reliance Power </div>
+            <div class="option" data-answer="correct"> C. Tata Power </div>
+            <div class="option" data-answer="wrong">  D. JSW Energy</div>
+        </div>
+
+        <div class="explanation" id="explanation">
+            <strong>Explanation:
+                Option C
+            </strong><br>
+            Tata Power has partnered with Druk Green Power Corporation Ltd to develop at least 5,000 MW of clean energy generation capacity in Bhutan, harnessing the country's vast hydropower potential. This strategic collaboration contributes to regional energy security and sustainability, aligning with Bhutan's vision to diversify its energy portfolio. The project includes 4,500 MW of hydropower and 500 MW of solar power capacity, demonstrating Tata Power's commitment to renewable energy and sustainable development in the region. This partnership strengthens India-Bhutan energy cooperation and promotes eco-friendly growth.
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+                
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+           </div>
+
+          <div class="comment" data-date="2022-04-01" data-detail="5">Marcus kaushik: Is that a correct one? </div>
+
+           <div class="comment" data-date="2023-02-15" data-detail="3">Mooney
+            said: strategic collaboration contributes to regional energy security </div>
+
+            <div class="comment" data-date="2023-04-10" data-detail="4">Perry said : Tata Power's commitment to renewable energy and sustainable development in the region</div>
+
+            <div class="comment" data-date="2023-01-20" data-detail="2"> Devine said :  Aligning with Bhutan's vision to diversify its energy portfolio..   </div>
+
+       </div>
+       <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3. Under Akbar, the Mir Bakshi was required to look after
+      </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="correct"> A. military affairs
+            </div>
+            <div class="option" data-answer="wrong"> B.  the state treasury </div>
+            <div class="option" data-answer="wrong"> C.  
+                the royal household </div>
+            <div class="option" data-answer="wrong">D.  the land revenue system</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option A
+            The head of the military was called the Mir Bakshi, appointed from among the leading nobles of the court. The Mir Bakshi was in charge of intelligence gathering, and also made recommendations to the emperor for military appointments and promotions.
+
+        </div>
+
+     </div>
+
+
+     <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5"> DEVENDRA KHERALIA said: So, the Mir Bakshi was Maan Singh in Akbar reign. Maan Singh was one of the nine jewels of his court.        
+        </div>
+            
+        <div class="comment" data-date="2023-04-15" data-detail="3">Rajmani Prajapati said: Thanks very most.
+        </div>
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Saikrishna
+            said:  Under Akbar section, the Mir Bakshi was used to see military affairs.    </div>
+
+        <div class="comment" data-date="2023-01-20" data-detail="2">Pawan said: He was man who used to see military affairs at the time of akbar.   </div>
+
+    </div>
+    <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. In which year was the Wildlife Crime Control Bureau (WCCB) formed?   </p>
+     
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  2006</div>
+            <div class="option" data-answer="correct"> B.  2007</div>
+            <div class="option" data-answer="wrong"> C.  2008</div>
+            <div class="option" data-answer="wrong">D.  2009</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option B
+            The Wildlife Crime Control Bureau (WCCB) was formed on June 6, 2007, under the Ministry of Environment, Forest and Climate Change. The WCCB is headquartered in New Delhi and plays a crucial role in combating organized wildlife crime in India. It became fully operational in 2008 and focuses on various functions such as data collection, advisory roles, and international cooperation to curb wildlife offences and prevent illegal trade.
+
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Harris said: It became fully operational in 2008 and focuses on various functions.   </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3"> Merlin
+            said: I think 2007 is right option. </div>
+ 
+        <div class="comment" data-date="2023-05-10" data-detail="4">Hunter
+            said: Not on 2006?. </div>
+  
+        <div class="comment" data-date="2023-08-20" data-detail="2">Carey said: I`m not sure!  </div>
+
+    </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>

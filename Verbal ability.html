@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbal Ability- Quiz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .question {
+            background: #f4a460;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .option:hover {
+            background-color: #915c83;
+        }
+        .correct {
+            background-color: #54FFC0;
+            border-color: #c3e6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+        .wrong {
+            background-color: #FF3333;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+        }
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #5d8aa8;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. i. I  ii. immediately	iii. salary  iv. my	v. want   </p>       
+       
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  43152</div>
+            <div class="option" data-answer="correct"> B.  15432</div>
+            <div class="option" data-answer="wrong"> C.  25143</div>
+            <div class="option" data-answer="wrong">D. 42351</div>
+        </div>
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation: Option B</strong><br>
+
+            "I want my salary immediately."
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5">Saieni kalyani said:  Here, "I want my salary immediately" is the correct form. </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3">V. Vani
+            said: The correct form is I want my salary immediately.</div>
+
+        <div class="comment" data-date="2023-05-10" data-detail="4">Aaminah
+            said: According to me; I immediately want my salary. Is this also right? If not why?</div>
+
+        <div class="comment" data-date="2023-08-20" data-detail="2">Mouni
+            said: We can also form the sentence in this manner because this is also sensing correct. </div>
+
+      </div>
+       <br>
+
+    
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>2. i. medicine	ii. a	iii. Neeta
+           iv. given	v. was:
+ 
+        </p>
+        <div class="options">
+            <div class="option" data-answer="wrong"> A. 51423 </div>
+            <div class="option" data-answer="wrong"> B. 25431 </div>
+            <div class="option" data-answer="wrong"> C. 15423 </div>
+            <div class="option" data-answer="correct">D.  35421</div>
+        </div>
+        <div class="explanation" id="explanation">
+            <strong>Explanation:</strong><br>
+            "Neeta was given a medicine."
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+                
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-02-01" data-detail="5">Umesh
+            said: It should "a medicine was given to Geeta". </div>
+
+        <div class="comment" data-date="2023-05-15" data-detail="3">Jay
+            said: Guys, how come its 'a' medicine?   </div>
+
+            <div class="comment" data-date="2023-09-10" data-detail="4">Karuppusamy said : Passive voice.  </div>
+
+            <div class="comment" data-date="2023-08-20" data-detail="2"> Fazal said : Because here medicine show as singular form.    </div>
+     
+       </div>
+       <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3. That which cannot be corrected  </p>
+
+    
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A. Unintelligible</div>
+            <div class="option" data-answer="correct"> B.  Indelible </div>
+            <div class="option" data-answer="wrong"> C.  Illegible </div>
+            <div class="option" data-answer="wrong">D.  Incorrigible</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Option B
+            Incorrigible (Adjective): (of a person or their tendencies) Not able to be corrected, improved, or reformed.
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank" rel="noopener">Watch Video Explanation</a> -->
+
+        <!-- <a href="https://youtu.be/M_d8WufJWKc" target="_blank">Watch Video Explanation</a> -->
+
+        </div>
+
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5">Prachi gupta
+            said: How incorrigble be used in sentence making? </div>
+
+        <div class="comment" data-date="2023-04-15" data-detail="3">Monu singh
+            said: Not similar of indelible & incorrigible.</div>
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Smiley
+            said:  It is impossible to change his incorrigible attitude. </div>
+        
+        <div class="comment" data-date="2023-01-20" data-detail="2">Jaya said: Indelible and incorrigible both having similar meanings then why not both? </div>
+    </div>
+    <br>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. Extreme old age when a man behaves like a fool   </p>
+      
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  Imbecility</div>
+            <div class="option" data-answer="wrong"> B.  Senility</div>
+            <div class="option" data-answer="correct"> C.  Dotage</div>
+            <div class="option" data-answer="wrong">D.  Superannuation</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Option C
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Manish Kumar said: I too agree Dotage is the correct answer.    </div>
+            
+        <div class="comment" data-date="2023-02-15" data-detail="3"> Nis 
+            said: Dotage - the period of life in which a person is old and weak.    </div>
+
+        <div class="comment" data-date="2023-05-10" data-detail="4">Indravathi
+            said: Dotage is correct. I too agree.</div>
+
+            <div class="comment" data-date="2023-08-20" data-detail="2">Aayushi Dhiran said: Dotage is the correct answer. I agree with the given answer. </div>
+                
+
+    </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>
